@@ -19,7 +19,7 @@ let width2 = undefined;
 let height2 = undefined;
 
 const UPDATE_LOAD_COEFF = 0.5;
-let targetInterval = 1000 / 180;
+let targetInterval = 1000 / 60;
 let prevTime = Date.now() - targetInterval;
 
 let now = undefined;
@@ -99,7 +99,7 @@ function mainloop() {
     let currentTime = Date.now();
     while (currentTime - prevTime > targetInterval * 0.5) {
 
-        now = Math.sin((Date.now()) / 20000);
+        now = Math.sin((Date.now()) / 15000);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         x1 = 10;
         y1 = canvas.height / 2 - 500;
